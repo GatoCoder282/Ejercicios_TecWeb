@@ -1,3 +1,6 @@
+using WebApplicationTraining.Models;
+
+
 
 namespace WebApplicationTraining
 {
@@ -8,6 +11,8 @@ namespace WebApplicationTraining
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
+            builder.Services.AddScoped<ICalculadora, Calculadora>();
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
